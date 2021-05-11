@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        
+        .input-element{
+            width: 400px;
+            margin: 5px;
+            border-style: double;
+        }
+        .btn{
+            text-align: center;
+            color: crimson;
+           
+        }
+    </style>
+</head>
+<body>
+    
+        <div>
+            <center> <table>
+           <form>
+               <tr>
+            <td> <label for="fname">First Name : </label></td><td align="right">
+             <td><input type="text" id ="fname" name="fname" placeholder="First Name"></td>
+       </tr>
+       <tr>
+           <td> 
+             <label for="lname">Last Name : </label></td><td align="right"> 
+            <td> <input type="text" id="lname" name="lname" placeholder="Last Name"></td>
+            </tr>
+       
+             <tr>
+               <td> 
+             <label for="Address">Address</label></td><td align="right"> 
+            <td> <input type="text" name="Address" id="address" placeholder="Address"></td>
+            </tr>
+             <tr>
+               <td> 
+             <label for="Pincode">Pincode : </label></td><td align="right"> 
+             <td><input type="text" name="Pincode" id="pincode" placeholder="Pincode"></td>
+             </tr>
+             <tr>
+               <td> 
+                
+             <label for="gender">Gender : </label></td><td align="right"></td>
+             <td><input type="radio" id="male" name="Gender" value="male">
+             <label for="male">Male</label>  
+             <input type="radio" id="female" name="Gender" value="female">
+                <label for="female">Female</label></td>
+
+             </tr>
+             <tr>
+               <td> 
+             <label for="food">Food : </label></td><td align="right">
+            <td> <input type="text" name="food" id="food" placeholder="Two Favourite Food"></td>
+            </tr>
+             <tr>
+               <td>     
+             <label for="State">State : </label></td><td align="right"> 
+             <td><input type="text" name="state" id="state" placeholder="State"></td>
+             </tr>
+             <tr>
+               <td> 
+             <label for="country">Country : </label></td><td align="right"> 
+              <td> <input type="text" name="country" id="country" placeholder="country"></td>
+              </tr>
+              <tr >
+            <td align="center" colspan="3"> <input type="button" value="Add" onclick="myFunction()"></td>
+           </tr>
+           </form>
+       </table></center>    
+         </div>
+    
+    <h1> Details</h1><center>
+    <table border=2 id="mytable">
+        <tr>
+            <td>FirstName</td>
+            <td>LastName</td>
+            <td>Address</td>
+            <td>Pincode</td>
+            <td>Gender</td>
+            <td>food</td>
+            <td>State</td>
+            <td>Country</td>
+        </tr>
+    </table></center>
+    <script>
+        function myFunction(){
+            var tbl=document.getElementById("mytable");
+            var row=tbl.insertRow();
+            var cell1=row.insertCell();
+            var cell2=row.insertCell();
+            var cell3=row.insertCell();
+            var cell4=row.insertCell();
+            var cell5=row.insertCell();
+            var cell6=row.insertCell();
+            var cell7=row.insertCell();
+            var cell8=row.insertCell();
+            
+            console.log(document.getElementById('fname').value);
+            cell1.innerHTML=document.getElementById('fname').value;
+            cell2.innerHTML=document.getElementById('lname').value;
+            cell3.innerHTML=document.getElementById('address').value;
+            cell4.innerHTML=document.getElementById('pincode').value;
+            cell5.innerHTML=document.querySelector('input[name="Gender"]:checked').value;
+            cell6.innerHTML=document.getElementById('food').value;
+            cell7.innerHTML=document.getElementById('state').value;
+            cell8.innerHTML=document.getElementById('country').value;
+            tbl.appendChild(row);
+        }
+    </script>
+</body>
+</html>
