@@ -1,4 +1,4 @@
-This is one of my first task on web development.
+This is one of my first tasks on web development.
 
 USED STACK : HTML.
 
